@@ -1,0 +1,12 @@
+extends ../layout/index
+
+block content
+    .py-10 
+        h1.my-10.text-center.text-4xl.font-extrabold Bienes
+            span.font-normal Raices
+        h2.text-center.text-4xl.font-extrabold= page
+    div(class="bg-white shadow py-8 px-4 rounded-lg max-w-md mx-auto")
+        p(class=error?'bg-red-500':'bg-green-500').py-2.px-5.rounded-lg.w-full.text-uppercase.font-bold.text-center.text-white= message
+
+        if !error
+            a(href="/auth/login" class="block text-center text-white bg-blue-500 hover:bg-blue-700 py-3 px-5 mt-5 rounded-lg font-bold uppercase") Iniciar Sesión
